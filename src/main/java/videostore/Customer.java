@@ -28,18 +28,16 @@ public class Customer {
         StringBuilder result = new StringBuilder();
         result.append("Звіт аренди для ").append(getName()).append("\n");
         while (rents.hasNext()) {
-            double thisAmount = 0;
             Rental each = (Rental)rents.next();
-            thisAmount = each.getCharge();
             frequentRenterPoints++;
             if (each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1)
                 frequentRenterPoints++;
 
             result.append("\t").append(each.getMovie().getTitle())
-                   .append("\t").append(String.valueOf(thisAmount))
+                   .append("\t").append(String.valueOf(each.getCharge()))
                    .append("\n");
 
-            totalAmount += thisAmount;
+            totalAmount += each.getCharge();
         }
 
         result.append("Сума заборгованості складає ").append(String.valueOf(totalAmount)).append("\n")
