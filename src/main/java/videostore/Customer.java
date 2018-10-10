@@ -30,7 +30,7 @@ public class Customer {
         while (rents.hasNext()) {
             double thisAmount = 0;
             Rental each = (Rental)rents.next();
-            thisAmount = amountFor(each);
+            thisAmount = each.getCharge();
             frequentRenterPoints++;
             if (each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1)
                 frequentRenterPoints++;
