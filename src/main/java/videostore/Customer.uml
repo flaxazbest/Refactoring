@@ -9,10 +9,8 @@
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="268.0" y="170.5" />
-  <SelectedNodes>
-    <node>videostore.Customer</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0" x="107.0" y="272.5" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>

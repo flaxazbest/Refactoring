@@ -29,9 +29,8 @@ public class Customer {
         result.append("Звіт аренди для ").append(getName()).append("\n");
         while (rents.hasNext()) {
             Rental each = (Rental)rents.next();
-            frequentRenterPoints++;
-            if (each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1)
-                frequentRenterPoints++;
+
+            frequentRenterPoints += each.getFrequentRenterPoints();
 
             result.append("\t").append(each.getMovie().getTitle())
                    .append("\t").append(String.valueOf(each.getCharge()))
