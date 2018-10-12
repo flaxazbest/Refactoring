@@ -2,27 +2,47 @@ package videostore;
 
 public class Movie {
 
-    public static final int CHILDRENS = 2;
-    public static final int REGULAR = 0;
-    public static final int NEW_RELEASE = 1;
+    static final int CHILDRENS = 2;
+    static final int REGULAR = 0;
+    static final int NEW_RELEASE = 1;
 
     private String title;
-    private int priceCode;
+    private Price price;
 
-    public Movie(String title, int priceCode) {
+    Movie(String title, int priceCode) {
         this.title = title;
-        this.priceCode = priceCode;
+        setPriceCode(priceCode);
     }
 
-    public int getPriceCode() {
-        return priceCode;
+    int getPriceCode() {
+        return price.getPriceCode();
     }
 
-    public void setPriceCode(int priceCode) {
-        this.priceCode = priceCode;
+    public void setPriceCode(int arg) {
+        switch (arg) {
+            case REGULAR:
+                price = new RegularPrice();
+                break;
+            case NEW_RELEASE:
+                price = new NewReleasePrice();
+                break;
+            case CHILDRENS:
+                price = new ChildrensPrice();
+                break;
+                default:
+                    throw new IllegalArgumentException("Некоректний тип");
+        }
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
+    }
+
+    double getCharge(int daysRental) {
+        return price.getCharge(daysRental);
+    }
+
+    int getFrequentRenterPoints(int daysRented) {
+        return price.getFrequentRenterPoints(daysRented);
     }
 }

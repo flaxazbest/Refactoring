@@ -3,14 +3,37 @@
   <ID>JAVA</ID>
   <OriginalElement>videostore.Customer</OriginalElement>
   <nodes>
-    <node x="209.0" y="209.0">videostore.Rental</node>
-    <node x="0.0" y="209.0">videostore.Movie</node>
-    <node x="0.0" y="0.0">videostore.Customer</node>
+    <node x="518.0" y="442.0">videostore.RegularPrice</node>
+    <node x="0.0" y="442.0">videostore.ChildrensPrice</node>
+    <node x="297.0" y="583.0">videostore.Rental</node>
+    <node x="0.0" y="0.0">videostore.Movie</node>
+    <node x="259.0" y="442.0">videostore.NewReleasePrice</node>
+    <node x="259.0" y="297.0">videostore.Price</node>
+    <node x="0.0" y="583.0">videostore.Customer</node>
   </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="107.0" y="272.5" />
-  <SelectedNodes />
+  <edges>
+    <edge source="videostore.RegularPrice" target="videostore.Price">
+      <point x="0.0" y="-48.0" />
+      <point x="637.5" y="417.0" />
+      <point x="458.16666666666674" y="417.0" />
+      <point x="79.66666666666674" y="47.5" />
+    </edge>
+    <edge source="videostore.NewReleasePrice" target="videostore.Price">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="videostore.ChildrensPrice" target="videostore.Price">
+      <point x="0.0" y="-48.0" />
+      <point x="119.5" y="417.0" />
+      <point x="298.8333333333333" y="417.0" />
+      <point x="-79.66666666666669" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="457.0" y="287.5" />
+  <SelectedNodes>
+    <node>videostore.Customer</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
