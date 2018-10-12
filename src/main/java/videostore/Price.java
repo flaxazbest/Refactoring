@@ -1,7 +1,6 @@
 package videostore;
 
-public abstract class Price {
-    abstract int getPriceCode();
+abstract class Price {
 
     abstract double getCharge(int daysRented);
 

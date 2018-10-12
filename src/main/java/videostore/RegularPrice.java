@@ -1,10 +1,6 @@
 package videostore;
 
-public class RegularPrice extends Price {
-    public int getPriceCode() {
-        return Movie.REGULAR;
-    }
-
+class RegularPrice extends Price {
     double getCharge(int daysRented) {
         double result = 2;
         if (daysRented > 2)

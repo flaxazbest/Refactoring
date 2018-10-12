@@ -1,8 +1,8 @@
 package videostore;
 
-public class Movie {
+class Movie {
 
-    static final int CHILDRENS = 2;
+    static final int CHILDREN = 2;
     static final int REGULAR = 0;
     static final int NEW_RELEASE = 1;
 
@@ -14,11 +14,7 @@ public class Movie {
         setPriceCode(priceCode);
     }
 
-    int getPriceCode() {
-        return price.getPriceCode();
-    }
-
-    public void setPriceCode(int arg) {
+    private void setPriceCode(int arg) {
         switch (arg) {
             case REGULAR:
                 price = new RegularPrice();
@@ -26,7 +22,7 @@ public class Movie {
             case NEW_RELEASE:
                 price = new NewReleasePrice();
                 break;
-            case CHILDRENS:
+            case CHILDREN:
                 price = new ChildrensPrice();
                 break;
                 default:

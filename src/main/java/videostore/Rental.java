@@ -14,10 +14,6 @@ class Rental {
         return movie;
     }
 
-    int getDaysRented() {
-        return daysRented;
-    }
-
     double getCharge() {
         return movie.getCharge(daysRented);
     }

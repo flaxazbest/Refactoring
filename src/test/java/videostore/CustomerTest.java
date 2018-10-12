@@ -20,7 +20,7 @@ public class CustomerTest {
     @Before
     public void init() {
         movie1 = new Movie("Ant man and Wisp", Movie.NEW_RELEASE);
-        movie2 = new Movie("Toy story", Movie.CHILDRENS);
+        movie2 = new Movie("Toy story", Movie.CHILDREN);
         movie3 = new Movie("X-man: origin wolverine", Movie.REGULAR);
 
         rental1 = new Rental(movie1, 5);

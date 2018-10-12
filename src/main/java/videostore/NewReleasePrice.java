@@ -1,9 +1,6 @@
 package videostore;
 
-public class NewReleasePrice extends Price {
-    public int getPriceCode() {
-        return Movie.NEW_RELEASE;
-    }
+class NewReleasePrice extends Price {
 
     double getCharge(int daysRented) {
         return daysRented * 3;
